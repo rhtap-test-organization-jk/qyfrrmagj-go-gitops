@@ -1,0 +1,22 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: qyfrrmagj-go-gitops
+  description: This is GitOps manifest for qyfrrmagj-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: qyfrrmagj-go
+    backstage.io/kubernetes-id: qyfrrmagj-go 
+    backstage.io/techdocs-ref: dir:.
+    jenkins.io/job-full-name: qyfrrmagj-go-gitops 
+    github.com/project-slug: rhtap-test-organization-jk/qyfrrmagj-go-gitops 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:qyfrrmagj-go
